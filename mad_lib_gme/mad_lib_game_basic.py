@@ -13,7 +13,7 @@ def mad_lib_story_explained():
 
 
 def space():
-    print('--------Respond Accordinaly-------')
+    print('--------Respond Accordinaly--------')
 
 def main():
     mad_lib_no_user_input_1st()
