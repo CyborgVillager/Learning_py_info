@@ -26,4 +26,4 @@ elif op == '/':
 
 else:
     print('Please choose a mathematical operation such as +, -, /, or %' + '\n' +
-          'Thank you...')
+          'Thank you (ᵔᴥᵔ) ')
