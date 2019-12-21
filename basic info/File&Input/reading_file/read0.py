@@ -1,7 +1,7 @@
 
 
 #r - read, w-write, a-append , r+-read and write
-user_file = open('employees.txt','r')
+user_file = open('employees.txt', 'r')
 
 # make sure to have .readable() to check if you can even read the file
 # print(user_file.read())
