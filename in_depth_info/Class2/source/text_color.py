@@ -1,6 +1,6 @@
 
 class color:
-#Main format
+# Main format
 # Text Colors
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -16,8 +16,6 @@ class color:
    END = '\033[0m'
 
 
-
-
 # Text Colors Quick Print Feature
 # just made some modis to the main color format for bit quicker typing if you want some colors
 # for text or #'s, will test out other ways making this process a bit faster
@@ -31,19 +29,15 @@ red = color.RED
 unknown_color = '~redacted color~ '
 
 # Text Style
-
 bold = color.BOLD
 underline = color.UNDERLINE
 end = color.END
-
-
 
 # Package Colors Info
 # https://godoc.org/github.com/whitedevops/colors
 
 '''''
 Possib. modis use in dict use/ etc. 
-
 
 colors = dict(PURPLE ='\033[95m',
               CYAN = '\033[96m',

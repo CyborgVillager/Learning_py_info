@@ -10,13 +10,13 @@ robot0_color_code = red
 
 
 class Robot:
-    def __init__(self,givenName,givenColor,process_Speed):
-        self.name = givenName
+    def __init__(self,user_input_name,givenColor,process_Speed):
+        self.user_input_name = user_input_name
         self.color = givenColor
         self.processing_speed_percent = process_Speed
 
     def introduct_self(self):
-        print('Hello my A.I\'s name is ' + yellow + self.name + end + ' , their main color is ' +
+        print('Hello my A.I\'s name is ' + yellow + self.user_input_name + end + ' , their main color is ' +
               self.color + end + ' and it\'s processing speed is ' + yellow +
               str(self.processing_speed_percent) + end + '%')
 
@@ -37,8 +37,9 @@ robot1.color_show = colors['GREEN']
 robot1.process_speed_percent = 35
 '''''
 
-user_input_name = input('Type your A.i\'s name: ' )
-user_input_color = input('What is ' + user_input_name + '\'s color? ').lower()
+
+
+user_input_color = input('What is ' + Robot.user_input_name() + '\'s color? ').lower()
 
 if user_input_color == 'red':
     user_input_color = red + 'red'
@@ -59,14 +60,14 @@ else:
 
 while True:
     try:
-        user_input_process_speed = int(input('What is '+ user_input_name +'\'s processing speed? '))
+        user_input_process_speed = int(input('What is '+ Robot.user_input_name() +'\'s processing speed? '))
         break
     except ValueError:
         print('\n ')
-        print('Type an integer for ' + user_input_name +'\'s speed ')
+        print('Type an integer for ' + Robot.user_input_name() +'\'s speed ')
 
 
-robot0 = Robot(user_input_name, user_input_color,user_input_process_speed)
+robot0 = Robot(Robot.user_input_name(), user_input_color,user_input_process_speed)
 # robot1 = Robot('Josh','blue',44)
 
 
