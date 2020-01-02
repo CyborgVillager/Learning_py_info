@@ -5,6 +5,7 @@ import time
 
 # special thanks to Engineer Man for the Tutorial :
 # https://www.youtube.com/watch?v=lbbNoCFSBV4&list=PLlcnQQJK8SUj5vlKibv8_i42nwmxDUOFc&index=7
+#to start the game use cmd or cmder access the folder and type either python snake.py or tree_electric_code.py
 
 def tree():
     # mutex

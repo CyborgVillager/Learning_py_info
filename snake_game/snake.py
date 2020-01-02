@@ -2,12 +2,11 @@
 # thanks in part to Engineer Man -> https://www.youtube.com/watch?v=rbasThWVb-c&t=85s
 # Engineer Man Python Playlist -> https://www.youtube.com/watch?v=lbbNoCFSBV4&list=PLlcnQQJK8SUj5vlKibv8_i42nwmxDUOFc&index=7
 # make sure to install curses via terminal -> pip install windows-curses
-
+#to start the game use cmd or cmder access the folder and type either python snake.py or tree_electric_code.py
 import random
 import curses
 
 
-from PIL import Image, ImageTk
 
 
 initlize = curses.initscr()
