@@ -72,7 +72,4 @@ def car_Info(car_color):
 
 
 
-
-
-
 car_Info(car_color)
