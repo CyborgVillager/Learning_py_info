@@ -58,17 +58,38 @@ def car_model(car_model):
     return car_model
 
 
-def car_Info(car_color,car_model):
-    is_sov_regan_era = input(' Is this car part of the regan/ soviet era?' + '\n'
-                             + ' Type Yes or No to proceed.' + '\n' +
-                             'Thank you. ')
+def is_sov_regan_era(is_sov_regan_era):
+
+        is_sov_regan_era = 'None'
+
+        is_sov_regan_era = input(' Is this car part of the regan/ soviet era?' + '\n'
+                                 + ' Type Yes or No to proceed.' + '\n' +
+                                 'Thank you. ').capitalize()
+
+    if is_sov_regan_era == 'Yes':
+        return is_sov_regan_era
+    elif is_sov_regan_era == 'No':
+        return is_sov_regan_era
+    else:
+        print('Must type yes or no')
+
+
+
+
+
+
+
+def car_Info(car_color,car_model,is_sov_regan_era ):
+
 
     car_color = car_color(car_color)
+    car_model = car_model(car_model)
+    is_sov_regan_era = is_sov_regan_era (is_sov_regan_era)
     car1 = Car(driver_name,car_color,car_model,is_sov_regan_era)
     print('The driver\'s name is ' + yellow + car1.getDriver_Name() + end + ' The car color is ' + car1.getCar_Color() +
-          end + ' The car moel is ' + car1.getCar_Model() + ' The car is part of the Soviet/ Regan Era? ' +
+          end + ' The car model is ' + yellow + car1.getCar_Model() + end + ' The car is part of the Soviet/ Regan Era? ' +
           yellow + car1.getIs_Sov_Regan_Era() + end)
 
 
 
-car_Info(car_color,car_model)
+car_Info(car_color,car_model,is_sov_regan_era )
