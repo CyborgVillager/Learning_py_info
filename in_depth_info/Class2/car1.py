@@ -28,8 +28,9 @@ class Car:
         return self.is_sov_regan_era
 
 
-
-driver_name = input('Enter driver name: ')
+def driver_name(driver_name):
+    driver_name = input('Enter driver name: ')
+    return driver_name
 
 def car_color(car_color):
     car_color = input('What is the car\'s color? ').lower()
@@ -60,36 +61,48 @@ def car_model(car_model):
 
 def is_sov_regan_era(is_sov_regan_era):
 
-        is_sov_regan_era = 'None'
-
-        is_sov_regan_era = input(' Is this car part of the regan/ soviet era?' + '\n'
+    while True:
+        is_sov_regan_era = input(' Is this car part of the Regan/ Soviet era?' + '\n'
                                  + ' Type Yes or No to proceed.' + '\n' +
                                  'Thank you. ').capitalize()
+        try:
+            if is_sov_regan_era == 'Yes':
+                return is_sov_regan_era
+            elif is_sov_regan_era == 'No':
+                return is_sov_regan_era
 
-    if is_sov_regan_era == 'Yes':
-        return is_sov_regan_era
-    elif is_sov_regan_era == 'No':
-        return is_sov_regan_era
-    else:
-        print('Must type yes or no')
-
-
-
+        except TypeError:
+               print('Please type Yes or No to continue.')
 
 
+def space():
+    space =  print('\n')
+
+def under_line_result_info():
+    print('---------------- ----------------  DRIVER CAR INFO - BASIC DATA ---------------- ' +
+          '---------------- ---------------- ')
+
+def under_line_result():
+    print('---------------- ---------------- ---------------- ---------------- ----------------' +
+          '---------------- ----------------')
 
 
-def car_Info(car_color,car_model,is_sov_regan_era ):
+def car_Info(driver_name,car_color,car_model,is_sov_regan_era ):
 
-
+    driver_name = driver_name(driver_name)
     car_color = car_color(car_color)
     car_model = car_model(car_model)
     is_sov_regan_era = is_sov_regan_era (is_sov_regan_era)
     car1 = Car(driver_name,car_color,car_model,is_sov_regan_era)
+
+    space()
+    under_line_result_info()
+
     print('The driver\'s name is ' + yellow + car1.getDriver_Name() + end + ' The car color is ' + car1.getCar_Color() +
-          end + ' The car model is ' + yellow + car1.getCar_Model() + end + ' The car is part of the Soviet/ Regan Era? ' +
-          yellow + car1.getIs_Sov_Regan_Era() + end)
+          end + ' The car model is ' + underline + yellow + car1.getCar_Model() + end +
+          ' The car is part of the Soviet/Regan Era: ' + bold + underline + yellow +
+          str(car1.getIs_Sov_Regan_Era()) + end)
 
+    under_line_result()
 
-
-car_Info(car_color,car_model,is_sov_regan_era )
+car_Info(driver_name,car_color,car_model,is_sov_regan_era )
