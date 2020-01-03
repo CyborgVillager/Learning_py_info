@@ -32,6 +32,7 @@ unknown_color = '~redacted color~ '
 bold = color.BOLD
 underline = color.UNDERLINE
 end = color.END
+combo_underline_yellow = underline + yellow
 
 # Package Colors Info
 # https://godoc.org/github.com/whitedevops/colors
