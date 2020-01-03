@@ -29,28 +29,35 @@ class Pets:
         return self.is_pet_aquatic_or_land_or_hybrid
 
 
+# ask the user for the pet's name
 def pet_name(pet_name):
     pet_name = input('What is your pet\'s name? ').capitalize()
     return pet_name
 
 
+# check for the pet's species
 def pet_species(pet_species, pet_name):
     pet_species = input('What is ' + pet_name + ' species? ')
     return pet_species
 
 
+# check for the pet's age
 def pet_age(pet_age, pet_name):
     pet_age = input('How old is ' + pet_name + '? ')
     return pet_age
 
+
+# space
 def space():
     print('\n')
 
+
+# check if the pet is an aquatic, land or hybrid animal
 def is_pet_aquatic_land_or_hybrid(is_pet_aquatic_land_or_hybrid, pet_name):
     while True:
         is_pet_aquatic_land_or_hybrid = input('Is ' + pet_name + ' an ' + bold + 'aquatic ' + end +
-                                                ' or' + bold + ' land' + end + ' animal? Or are they a ' +
-                                                 bold + 'hybrid? ').lower()
+                                              ' or' + bold + ' land' + end + ' animal? Or are they a ' +
+                                              bold + 'hybrid? ').lower()
         try:
             if is_pet_aquatic_land_or_hybrid == 'land':
                 return is_pet_aquatic_land_or_hybrid
@@ -62,9 +69,10 @@ def is_pet_aquatic_land_or_hybrid(is_pet_aquatic_land_or_hybrid, pet_name):
                 space()
                 print('You must type either if  ' + pet_name + 'is an aquatic, land or hybrid animal: ')
         except TypeError:
-                print('You must type either if  ' + pet_name + 'is an aquatic, land or hybrid animal: ')
+            print('You must type either if  ' + pet_name + 'is an aquatic, land or hybrid animal: ')
 
 
+# main result aquire info
 def main(pet_name, pet_species, pet_age, is_pet_aquatic_land_or_hybrid):
     pet_name = pet_name(pet_name)
     pet_species = pet_species(pet_species, pet_name)
@@ -72,10 +80,12 @@ def main(pet_name, pet_species, pet_age, is_pet_aquatic_land_or_hybrid):
     is_pet_aquatic_land_or_hybrid = is_pet_aquatic_land_or_hybrid(is_pet_aquatic_land_or_hybrid, pet_name)
     main = Pets(pet_name, pet_species, pet_age, is_pet_aquatic_land_or_hybrid)
 
+    # print the info onto the terminal
     print('Your pet\'s name is ' + yellow + main.pet_name + end + '. It\'s species is ' + red + main.pet_species + end +
-            '. ' + yellow + main.pet_name + '\'s' + end + ' age is ' +  red + str(main.pet_age) + end + ' years old. '
+          '. ' + yellow + main.pet_name + '\'s' + end + ' age is ' + red + str(main.pet_age) + end + ' years old. '
           + yellow + main.pet_name + end + ' is an ' + red +
-          main.is_pet_aquatic_or_land_or_hybrid + end  + ' animal')
+          main.is_pet_aquatic_or_land_or_hybrid + end + ' animal')
 
 
+# results
 main(pet_name, pet_species, pet_age, is_pet_aquatic_land_or_hybrid)
