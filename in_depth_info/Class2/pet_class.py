@@ -46,17 +46,17 @@ def pet_age(pet_age, pet_name):
 def space():
     print('\n')
 
-def is_pet_aquatic_land_or_hybrid(is_pet_aquatic_or_land_or_hybrid, pet_name):
+def is_pet_aquatic_land_or_hybrid(is_pet_aquatic_land_or_hybrid, pet_name):
     while True:
-        is_pet_aquatic_or_land_or_hybrid = input('Is ' + pet_name + ' an ' + bold + 'aquatic ' + end +
+        is_pet_aquatic_land_or_hybrid = input('Is ' + pet_name + ' an ' + bold + 'aquatic ' + end +
                                                 ' or' + bold + ' land' + end + ' animal? Or are they a ' +
                                                  bold + 'hybrid? ').lower()
         try:
-            if is_pet_aquatic_or_land_or_hybrid == 'land':
+            if is_pet_aquatic_land_or_hybrid == 'land':
                 return is_pet_aquatic_land_or_hybrid
-            elif is_pet_aquatic_or_land_or_hybrid == 'aquatic':
+            elif is_pet_aquatic_land_or_hybrid == 'aquatic':
                 return is_pet_aquatic_land_or_hybrid
-            elif is_pet_aquatic_or_land_or_hybrid == 'hybrid':
+            elif is_pet_aquatic_land_or_hybrid == 'hybrid':
                 return is_pet_aquatic_land_or_hybrid
             else:
                 space()
@@ -69,13 +69,13 @@ def main(pet_name, pet_species, pet_age, is_pet_aquatic_land_or_hybrid):
     pet_name = pet_name(pet_name)
     pet_species = pet_species(pet_species, pet_name)
     pet_age = str(pet_age(pet_age, pet_name))
-    is_pet_aquatic_land_or_hybrid = str(is_pet_aquatic_land_or_hybrid(is_pet_aquatic_land_or_hybrid, pet_name))
+    is_pet_aquatic_land_or_hybrid = is_pet_aquatic_land_or_hybrid(is_pet_aquatic_land_or_hybrid, pet_name)
     main = Pets(pet_name, pet_species, pet_age, is_pet_aquatic_land_or_hybrid)
 
-    print('Your pet name is ' + yellow + main.pet_name + end + '. It\'s species is ' + red + main.pet_species + end +
-            '. ' + yellow + main.pet_name + '\'s' + end + ' age is ' +  red + str(main.pet_age) + end + '. '
-          + yellow + main.pet_name + end + ' is an ' + red +  main.is_pet_aquatic_or_land_or_hybrid + end
-          + ' animal')
+    print('Your pet\'s name is ' + yellow + main.pet_name + end + '. It\'s species is ' + red + main.pet_species + end +
+            '. ' + yellow + main.pet_name + '\'s' + end + ' age is ' +  red + str(main.pet_age) + end + ' years old. '
+          + yellow + main.pet_name + end + ' is an ' + red +
+          main.is_pet_aquatic_or_land_or_hybrid + end  + ' animal')
 
 
 main(pet_name, pet_species, pet_age, is_pet_aquatic_land_or_hybrid)
