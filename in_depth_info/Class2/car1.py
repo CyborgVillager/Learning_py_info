@@ -50,13 +50,15 @@ def car_color(car_color):
         car_color = dark_cyan + 'dark cyan'
     else:
         car_color = unknown_color
-    car_color = car_color
     return car_color
 
 
-
-def car_Info(car_color):
+def car_model(car_model):
     car_model = input('What is the car\'s model? ')
+    return car_model
+
+
+def car_Info(car_color,car_model):
     is_sov_regan_era = input(' Is this car part of the regan/ soviet era?' + '\n'
                              + ' Type Yes or No to proceed.' + '\n' +
                              'Thank you. ')
@@ -69,4 +71,4 @@ def car_Info(car_color):
 
 
 
-car_Info(car_color)
+car_Info(car_color,car_model)
