@@ -5,7 +5,6 @@ from text_color import *
 # car model #
 # Sov / Regan Era
 
-
 class Car:
     def __init__(self, driver_name, car_color,car_model,is_sov_regan_era):
         self.driver_name = driver_name
@@ -16,7 +15,6 @@ class Car:
     def getDriver_Name(self):
         self.driver_name
         return self.driver_name
-
 
     def getCar_Color(self):
         return self.car_color
