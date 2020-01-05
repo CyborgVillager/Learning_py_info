@@ -1,7 +1,16 @@
 from enum import Enum
 from enum import IntEnum
+from random import * 
 # Thanks in part to the card tutorial
 # https://www.youtube.com/watch?v=62TmpPDs0mM @Cpt Jimmy Kirk
+
+
+full_deck = []
+
+class Playing_Card:
+    def __init__(self,card_value,card_suit):
+        self.card_value = card_value
+        self.card_suit = card_suit
 
 class Card(IntEnum):
     Two = 2
@@ -28,8 +37,20 @@ class Suit(Enum):
     Diamonds = 'diamonds'
 
 
-class Playing_Card:
-    def __init__(self,card_value,card_suit):
-        self.card_value = card_value
-        self.card_suit = card_suit
 
+# function to handle the full deck of cards
+def create_deck():
+    for suit in Suit:
+        for card in Card:
+            full_deck.append(Playing_Card(Card(card),Suit(suit)))
+    return full_deck
+
+
+
+'''''
+Test if info is success
+for index in range(0,len(full_deck)):
+    print('Card: ' , full_deck[index].card_value)
+    print('Suit: ' , full_deck[index].card_suit)
+
+'''''
