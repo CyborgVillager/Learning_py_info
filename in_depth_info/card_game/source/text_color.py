@@ -28,20 +28,26 @@ yellow = color.YELLOW
 red = color.RED
 unknown_color = '~redacted color~ '
 
-# Text Style
+# Text Style's for main_card.py
 bold = color.BOLD
 underline = color.UNDERLINE
 end = color.END
 combo_underline_yellow = underline + yellow
 player0_color = bold + green
 player1_color = bold + purple
+
+# Scores
 total_score = bold + cyan
 lose_score = bold + red
 win_score = bold + yellow
+
+# War, Win/card color
 war_color = bold + red + underline
 card_color = bold + yellow
 winner_text = bold + yellow
 war_player_score = bold + yellow
+
+# Game Over
 game_over = bold + underline + red
 
 # Package Colors Info

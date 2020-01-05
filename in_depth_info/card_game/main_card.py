@@ -20,7 +20,8 @@ deal_war()
 
 
 # Now to let the game compare each player's card
-# & check for info
+# & check for info if players have = scores.
+# If so game over for both players
 count_player0 = 0
 count_player1 = 0
 
@@ -29,6 +30,8 @@ def space():
 def line_space():
     print('------- ------- ------- -------')
 
+# Back end info from card_game.py in regarding to card_value
+# Player text colors & score color can be found in source under card_game -> text_color.py
 for index in range(0,len(player0_card)):
     if (player0_card[index].card_value > player1_card[index].card_value):
         count_player0 += 1
@@ -53,20 +56,26 @@ for index in range(0,len(player0_card)):
         print(player1_color + 'Player1\'s Score: ' + total_score + str(count_player1))
         space()
 
+    # Count to see how much each player has the higher score than the other
     player_0_win_margin = count_player0 - count_player1
     player_1_win_margin = count_player1 - count_player0
+
+
+    # Player 0 Victory
     if count_player0 > count_player1:
         print(player0_color +'Player0\'s wins by a margin of ' + war_player_score + str(player_0_win_margin))
         print(player0_color +'Player0\'s orignal score was: ' + war_player_score +  str(count_player0))
         print(player1_color + 'Player1\'s orignal score was: ' + war_player_score + str(count_player1))
         print(winner_text + '---------- ---------- ---------- WINNER' + player0_color + ' Player0 '
                           + end + winner_text + '---------- ---------- ----------')
+    # Player 1 Victory
     elif count_player1 > count_player0:
         print(player1_color +'Player\'s 1 wins by a margin of ' + war_player_score +  str(player_1_win_margin))
         print(player1_color +'Player1\'s orignal score was: ' + war_player_score + str(count_player1))
         print(player0_color +'Player0\'s orignal score was: ' + war_player_score + str(count_player0))
         print(winner_text +'---------- ---------- ---------- WINNER' + player1_color + ' Player1 '
               + end + winner_text + '---------- ---------- ----------')
+    # Game over if both players have = score
     else:
         print(game_over + 'Both players lose!!' + end)
         print(player0_color + 'Player0 Score: ' + war_player_score + str(count_player0))
