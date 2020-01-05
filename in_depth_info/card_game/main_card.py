@@ -89,6 +89,6 @@ for index in range(0, len(player0_card)):
         print(game_over + 'Both players lose!!' + end)
         print(player0_color + 'Player0 Score: ' + war_player_score + str(count_player0))
         print(player1_color + 'Player1 Score: ' + war_player_score + str(count_player1))
-        print(game_over + '---------- ---------- ---------- GAME OVER- NOBODY WINS ---------- ---------- ----------')
+        print(game_over + '---------- ---------- ---------- GAME OVER--NOBODY WINS ---------- ---------- ----------')
         space()
-    
+
