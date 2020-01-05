@@ -33,14 +33,14 @@ def line_space():
 # Back end info from card_game.py in regarding to card_value
 # Player text colors & score color can be found in source under card_game -> text_color.py
 for index in range(0,len(player0_card)):
-    if (player0_card[index].card_value > player1_card[index].card_value):
+    if player0_card[index].card_value > player1_card[index].card_value:
         count_player0 += 1
         print(player0_color +'Player 0' + end + win_score + ' wins' + end +' the hand with: ' + card_color , player0_card[index].card_value)
         print(player1_color +'Player 1' + end + lose_score + ' loses' + end + ' with card: ' + card_color , player1_card[index].card_value)
         print(player0_color +'Player 0' + end + total_score +' Total Score: ' + end + str(count_player0))
         space()
         line_space()
-    if (player0_card[index].card_value < player1_card[index].card_value):
+    if player0_card[index].card_value < player1_card[index].card_value:
         count_player1 += 1
         print(player1_color + 'Player 1' + end + win_score + ' wins' + end + ' the hand with: ' + card_color , player1_card[index].card_value)
         print(player0_color +'Player 0 ' + end +  lose_score + 'loses' + end + ' with card: ' + card_color , player0_card[index].card_value)
