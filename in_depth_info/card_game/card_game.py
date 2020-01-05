@@ -1,11 +1,12 @@
 from enum import Enum
 from enum import IntEnum
-from random import * 
+from random import *
 # Thanks in part to the card tutorial
 # https://www.youtube.com/watch?v=62TmpPDs0mM @Cpt Jimmy Kirk
 
 
 full_deck = []
+partial_deck_drawn = []
 
 class Playing_Card:
     def __init__(self,card_value,card_suit):
@@ -45,7 +46,11 @@ def create_deck():
             full_deck.append(Playing_Card(Card(card),Suit(suit)))
     return full_deck
 
-
+# return single random card from the deck
+def draw_cards(deck):
+    random_card = randint(0,len(deck)-1)
+    # removes the card from the deck using .pop
+    return deck.pop(random_card)
 
 '''''
 Test if info is success
