@@ -52,8 +52,17 @@ def draw_cards(deck):
     # removes the card from the deck using .pop
     return deck.pop(random_card)
 
+create_deck()
+partial_deck_drawn = list(full_deck)
+
 '''''
-Test if info is success
+# testing if the card is able to be drawn v1
+test_the_card = draw_cards(partial_deck_drawn)
+print('You have draw a :', test_the_card.card_value,test_the_card.card_suit)
+'''''
+
+'''''
+Test if info is success v0
 for index in range(0,len(full_deck)):
     print('Card: ' , full_deck[index].card_value)
     print('Suit: ' , full_deck[index].card_suit)
